@@ -29,6 +29,7 @@ dependencies:
   graphql_flutter: ^3.0.0
   json_annotation: ^3.0.1
   flutter_markdown: ^0.5.0
+  url_launcher: ^5.7.2
   # bloc, flutter bloc, graphql, flutter graphql
 
  
