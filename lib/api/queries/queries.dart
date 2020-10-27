@@ -1,12 +1,1 @@
-const fetchJobs = r'''
-query GetJobs() {
-    jobs {
-      id,
-      title,
-      locationNames,
-      isFeatured
-      applyUrl
-    }
-  }
-
-''';
+export 'fetch_jobs.dart';
