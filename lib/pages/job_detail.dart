@@ -15,8 +15,13 @@ class JobDetail extends StatelessWidget {
       appBar: AppBar(
         title: Text(job.title ?? ""),
       ),
-      body: Center(
-        child: Text("Fucker"),
+      body: ListView(
+        children: [
+          Text(job.title ?? ""),
+          Text(job.locationNames ?? ""),
+          Text(job.applyUrl ?? ""),
+          Text(job.description ?? "")
+        ],
       ),
     );
   }

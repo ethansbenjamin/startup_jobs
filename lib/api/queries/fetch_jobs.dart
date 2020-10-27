@@ -6,6 +6,7 @@ query GetJobs() {
       locationNames,
       isFeatured
       applyUrl
+      description
     }
   }
 
