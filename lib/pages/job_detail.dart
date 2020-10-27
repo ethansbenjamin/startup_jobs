@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_graphql_bloc/api/models/models.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 
 class JobDetail extends StatelessWidget {
   static Route route() {
@@ -15,13 +16,16 @@ class JobDetail extends StatelessWidget {
       appBar: AppBar(
         title: Text(job.title ?? ""),
       ),
-      body: ListView(
-        children: [
-          Text(job.title ?? ""),
-          Text(job.locationNames ?? ""),
-          Text(job.applyUrl ?? ""),
-          Text(job.description ?? "")
-        ],
+      body: Container(
+        width: MediaQuery.of(context).size.width * .9,
+        child: ListView(
+          children: [
+            Text(job.title ?? ""),
+            Text(job.locationNames ?? ""),
+            Text(job.applyUrl ?? ""),
+            MarkdownBody(data: job.description ?? ""),
+          ],
+        ),
       ),
     );
   }
