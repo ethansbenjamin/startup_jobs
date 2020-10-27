@@ -10,6 +10,7 @@ class Job {
     @required this.title,
     @required this.locationNames,
     @required this.description,
+    @required this.applyUrl,
     this.isFeatured = false,
   });
 
@@ -20,4 +21,5 @@ class Job {
   final String locationNames;
   final bool isFeatured;
   final String description;
+  final String applyUrl;
 }

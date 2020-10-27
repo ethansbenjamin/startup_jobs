@@ -12,6 +12,7 @@ Job _$JobFromJson(Map<String, dynamic> json) {
     title: json['title'] as String,
     locationNames: json['locationNames'] as String,
     description: json['description'] as String,
+    applyUrl: json['applyUrl'] as String,
     isFeatured: json['isFeatured'] as bool,
   );
 }
