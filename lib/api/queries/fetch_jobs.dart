@@ -7,6 +7,12 @@ query GetJobs() {
       isFeatured
       applyUrl
       description
+       company{
+        name
+        logoUrl
+        websiteUrl
+        
+      }
     }
   }
 

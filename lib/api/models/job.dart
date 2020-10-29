@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import 'models.dart';
+
 part 'job.g.dart';
 
 @JsonSerializable(createToJson: false)
@@ -11,6 +13,7 @@ class Job {
     @required this.locationNames,
     @required this.description,
     @required this.applyUrl,
+    @required this.company,
     this.isFeatured = false,
   });
 
@@ -22,4 +25,5 @@ class Job {
   final bool isFeatured;
   final String description;
   final String applyUrl;
+  final Company company;
 }

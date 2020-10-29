@@ -13,6 +13,9 @@ Job _$JobFromJson(Map<String, dynamic> json) {
     locationNames: json['locationNames'] as String,
     description: json['description'] as String,
     applyUrl: json['applyUrl'] as String,
+    company: json['company'] == null
+        ? null
+        : Company.fromJson(json['company'] as Map<String, dynamic>),
     isFeatured: json['isFeatured'] as bool,
   );
 }
