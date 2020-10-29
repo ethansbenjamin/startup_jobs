@@ -1,17 +1,16 @@
 const fetchJobs = r'''
 query GetJobs() {
-    jobs {
+     jobs {
       id,
       title,
       locationNames,
       isFeatured
-      applyUrl
-      description
-       company{
+        applyUrl
+     description
+      company{
         name
         logoUrl
         websiteUrl
-        
       }
     }
   }

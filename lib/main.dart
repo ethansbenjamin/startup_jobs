@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(accentColor: Color.fromRGBO(229, 53, 171, 1)),
       home: BlocProvider(
         create: (_) => JobsBloc(
           apiClient: apiClient,
@@ -32,8 +33,21 @@ class JobsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        title: Text('Startup Jobs'),
-        backgroundColor: Colors.lightBlue,
+        // title: Text('GraphQL Startup Jobs'),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.network(
+              "https://marmelab.com/images/blog/graphql/logo.png",
+              height: 50,
+            ),
+            Text(
+              "Startup Jobs",
+              style: TextStyle(color: Theme.of(context).accentColor),
+            )
+          ],
+        ),
+        backgroundColor: Colors.white,
       ),
       body: Center(
         child: BlocBuilder<JobsBloc, JobsState>(

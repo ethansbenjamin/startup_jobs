@@ -9,7 +9,6 @@ class JobCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print(job.description);
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => JobDetail(job: job)));
       },
@@ -40,7 +39,7 @@ class JobCard extends StatelessWidget {
               left: 10,
               child: Icon(
                 job.isFeatured == true ? Icons.star : Icons.star_border,
-                color: Colors.amber,
+                color: Color.fromRGBO(229, 53, 171, 1),
               ),
             ),
             Positioned(
@@ -48,15 +47,26 @@ class JobCard extends StatelessWidget {
               left: 50,
               child: Text(
                 job.title ?? "",
-                style: TextStyle(fontSize: 14),
+                style: TextStyle(fontSize: 12),
               ),
             ),
             Positioned(
               top: 50,
               left: 50,
               child: Text(
+                job.company.name ?? "",
+                style: TextStyle(
+                    fontSize: 12,
+                    color: Theme.of(context).accentColor,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            Positioned(
+              bottom: 10,
+              right: 10,
+              child: Text(
                 job.locationNames ?? "",
-                style: TextStyle(fontSize: 12),
+                style: TextStyle(fontSize: 10),
               ),
             ),
           ],
